@@ -476,8 +476,48 @@
         bottom: 15px;
         right: 15px;
       }
+      .contact {
+     width: 20%;
+    }
+     .contact-form {
+       max-width: 550px;
+      width: 100%;
+      margin-left: 0;
+
+    }
+
+     footer #social-icons {
+    justify-content: center;
+  }
+  footer div[style*="max-width: 1200px"] {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  footer #number {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  footer div[style*="max-width: 1200px"] > div {
+    flex: unset;
+    min-width: unset;
+  }
+
+  footer a {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 1.8rem 1rem;
+  }
+
     }
   </style>
+
+  
 </head>
 <body>
 
@@ -663,11 +703,11 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
  
 <!-- Footer with Phone Numbers + Social Icons -->
 <!-- Footer: Everything in ONE LINE -->
-<footer>
+<footer id="footer">
   <div style="max-width: 1200px; margin: 0 auto; padding: 1.2rem 1rem; font-size: 0.92rem; color: #ddd; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; text-align: center;">
     
     <!-- Left: Phone Numbers -->
-    <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; font-weight: 500;">
+    <div id="number" style="display: flex; gap: 1.2rem; flex-wrap: wrap; font-weight: 400;">
       <span>
         <i class="fas fa-flag" style="color: #ffcc00; margin-right: 0.4rem;"></i>
         <strong>BE :</strong>
@@ -690,7 +730,7 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
     </div>
 
     <!-- Right: Social Icons -->
-    <div style="display: flex; gap: 1rem;">
+    <div  id="social-icons" style="display: flex; gap: 1rem;">
       <a href="https://facebook.com" target="_blank" style="color: #ddd; font-size: 1.5rem;" title="Facebook">
         <i class="fab fa-facebook-f"></i>
       </a>
