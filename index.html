@@ -430,40 +430,8 @@
       color: var(--secondary);
       transform: translateY(-3px);
     }
-    .golden-call-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: linear-gradient(45deg, #D4A017, #FFD700);
-  color: white;
-  padding: 1rem 5rem;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 8px 20px rgba(212, 160, 23, 0.4);
-  transition: all 0.4s ease;
-  border: 2px solid #D4A017;
-  margin: 0px 0px 40px 400px;
-}
 
-.golden-call-btn:hover {
-  background: linear-gradient(45deg, #8B4513, #D4A017);
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 15px 30px rgba(212, 160, 23, 0.6);
-  color: white;
-}
 
-.golden-call-btn i {
-  font-size: 1.3rem;
-  animation: ring 1.5s infinite;
-}
-
-@keyframes ring {
-  0%, 100% { transform: rotate(0deg); }
-  10%, 30%, 50%, 70%, 90% { transform: rotate(-15deg); }
-  20%, 40%, 60%, 80% { transform: rotate(15deg); }
-}
 
     /* Footer */
     footer {
@@ -583,7 +551,45 @@
   }
 
     }
-  </style>
+
+.view-gallery-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(45deg, #D4A017, #FFD700);
+  color: white;
+  padding: 0.9rem 2rem; /* Normal size */
+  border-radius: 50px;
+  font-size: 1.1rem; /* Normal font */
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(212, 160, 23, 0.3);
+  transition: all 0.3s ease;
+  border: 2px solid #D4A017;
+}
+
+.view-gallery-btn:hover {
+  background: linear-gradient(45deg, #8B4513, #D4A017);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212, 160, 23, 0.5);
+}
+
+.view-gallery-btn i {
+  font-size: 1.2rem;
+}
+
+/* Mobile pe thoda chhota */
+@media (max-width: 768px) {
+  .view-gallery-btn {
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+  }
+  .view-gallery-btn i {
+    font-size: 1.1rem;
+  }
+}
+</style>
+
 
   
 </head>
@@ -729,13 +735,16 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
   <!-- Contact Form -->
 
 <section id="contact">
+  <!-- View Gallery Button - Form ke upr daalo -->
+<div style="text-align: center; margin-bottom: 2rem;">
+  <a href="gallery.html" class="view-gallery-btn">
+    <i class="fas fa-images"></i> view the photo gallery
+  </a>
+</div>
+ 
   <h2 class="section-title" data-en="View Gallery" data-fr="Prendre Rendez-vous">
     Book an Appointment
   </h2>
-
-
-  <a href="gallery.html" class="golden-call-btn">
-   View Gallery</a>
     <!-- Form -->
     <div class="contact-form">
       <form id="contactForm">
