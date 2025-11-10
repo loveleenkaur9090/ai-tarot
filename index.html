@@ -140,8 +140,22 @@
 
     /* Call Button - Small & Beautiful */
 .call-btn {
-  /* display: flex; */
-  align-items: center;
+  display: flex; 
+  align-items: center; 
+  gap: 0.4rem; 
+  background: #D4A017; 
+  color: white; 
+  padding: 0.5rem 0.9rem; 
+  border-radius: 30px; 
+  font-size: 0.85rem; 
+  font-weight: 500; 
+  transition: all 0.3s ease; 
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3); 
+  white-space: nowrap; 
+}
+
+.butoon-header{
+ align-items: center;
   gap: 0.4rem;
   background: #D4A017;
   color: white;
@@ -154,6 +168,7 @@
   cursor: pointer;
   width: 15%;
   transition: 0.3s;
+
 }
 
 .call-btn i {
@@ -178,6 +193,24 @@
   .nav-right {
     gap: 0.5rem;
   }
+  .call-btn{
+    display: none;
+  }
+  /* .butoon-header{
+  align-items: center;
+  gap: 0.4rem;
+  background: #D4A017;
+  color: white;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  border: none;
+  padding:0.7rem;
+  cursor: pointer;
+  width: 15%;
+  transition: 0.3s;
+  } */
 }
     /* Hero Header */
     header {
@@ -533,7 +566,12 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-
+<div class="nav-right">
+      <!-- Small Call Button -->
+      <a href="tel:+33752238646" class="call-btn" title="Appeler la France">
+        <i class="fas fa-phone"></i> Fr 07 52 23 86 46
+      </a>
+    </div>
 
     <div class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
@@ -554,7 +592,7 @@
     </p>
     <div class="nav-right">
       <!-- Small Call Button -->
-      <a href="tel:+33752238646" class="call-btn" title="Appeler la France">
+      <a href="tel:+33752238646" class="butoon-header" title="Appeler la France">
         <i class="fas fa-phone"></i> Fr 07 52 23 86 46
       </a>
     </div>
