@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monsieur Sila | Grand Marabout Medium in Brussels</title>
+  <meta name="description" content="Grand Marabout Medium in Brussels - Love Return, Protection, Desenvoutement, Career Success. 30+ Years Experience." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <style>
+    :root {
+      --primary: #8B4513;
+      --secondary: #D4A017;
+      --dark: #2C1810;
+      --light: #f9f5f0;
+      --accent: #c9302c;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.8;
+      overflow-x: hidden;
+      transition: var(--transition);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--dark);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--secondary);
+      font-weight: 700;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: white;
+      font-weight: 500;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: var(--secondary);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after {
+      width: 100%;
+    }
+
+    .nav-menu a:hover {
+      color: var(--secondary);
+    }
+
+    .lang-toggle {
+      background: var(--secondary);
+      color: var(--dark);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .lang-toggle:hover {
+      background: white;
+    }
+
+    .hamburger {
+      display: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+
+    /* Call Button - Small & Beautiful */
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #D4A017;
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+  white-space: nowrap;
+}
+
+.call-btn i {
+  font-size: 0.9rem;
+}
+
+.call-btn:hover {
+  background: #FFFF;
+  color: black;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .call-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .call-btn i {
+    font-size: 0.8rem;
+  }
+  .nav-right {
+    gap: 0.5rem;
+  }
+}
+    /* Hero Header */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('bg01 (1).jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: var(--secondary);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0.5rem auto;
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 2rem;
+      color: var(--primary);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      display: block;
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
+
+    /* Content with Image */
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-top: 2rem;
+    }
+
+    .content-text {
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    .content-img {
+      width: 100%;
+      height: 320px;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .content-img.right {
+      order: 2;
+    }
+
+    .highlight {
+      background: linear-gradient(120deg, #fdf6e3 0%, #fdf6e3 100%);
+      background-size: 0% 100%;
+      background-repeat: no-repeat;
+      display: inline;
+      padding: 0 4px;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+
+
+
+    /* Services Grid */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    /* Contact Form */
+    
+
+
+
+    .contact-form {
+      background: white;
+      padding: 3rem 2.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 550px;
+      width: 100%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .form-group {
+      margin-bottom: 1.4rem;
+    }
+
+
+    label {
+      display: block;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.9rem;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--secondary);
+      outline: none;
+      box-shadow: 0 0 8px rgba(212, 160, 23, 0.3);
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: var(--secondary);
+      transform: translateY(-2px);
+    }
+
+    .success-msg, .error-msg {
+      text-align: center;
+      margin-top: 1.2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      display: none;
+    }
+
+    .success-msg {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+
+    .error-msg {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    /* Social Icons */
+    .social-icons {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .social-icons a {
+      font-size: 1.8rem;
+      margin: 0 1rem;
+      color: var(--dark);
+      transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+      color: var(--secondary);
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: #ddd;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: var(--secondary);
+    }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: white;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #D4A017;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: var(--dark);
+        flex-direction: column;
+        padding: 1rem 0;
+        transition: 0.3s;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .content-img.right {
+        order: 0;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">Monsieur Sila</div>
+    
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#home">Accueil</a></li>
+      <li><a href="#about">À Propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Small Call Button -->
+      <a href="tel:+33752238646" class="call-btn" title="Appeler la France">
+        <i class="fas fa-phone"></i> Fr 07 52 23 86 46
+      </a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+</nav>
+
+
+
+  <!-- Header -->
+  <header id="home">
+    <h1>Monsieur Sila</h1>
+    <p data-en="Grand Marabout Medium in Brussels" data-fr="Grand Marabout Voyant Médium à Bruxelles">
+      Grand Marabout Medium in Brussels
+    </p>
+    <p data-en="Love Return • Protection • Career • Desenvoutement" data-fr="Retour Affectif • Désenvoutement • Protection • Travail">
+      Love Return • Protection • Career • Desenvoutement
+    </p>
+  </header>
+
+  <!-- Section 1: About & Love Specialist -->
+  <section id="about">
+    <h2 class="section-title" data-en="About Monsieur Sila" data-fr="Monsieur Sila, Grand Marabout">About Mr. Sila</h2>
+    <div class="content-grid">
+      <div class="content-text">
+        <h4 data-en="Monsieur Sila, Grand Marabout Medium in Brussels and throughout Belgium, specialist in <strong>love return</strong> and <strong>rapid desenvoutement</strong>." 
+           data-fr="Monsieur Sila, Grand Marabout Voyant Médium à Bruxelles et partout en Belgique, spécialiste du <strong>retour de l’être aimé</strong> et <strong>désenvoutement rapide</strong>.">
+        
+        Mr. Sila, Grand Marabout Clairvoyant Medium in Brussels and throughout Belgium, specialist in bringing back loved ones and rapid unbinding.
+        </h4>
+
+          <p>With 30 years of experience, Mr. Sila, a renowned Grand Marabout, clairvoyant, and medium in Brussels, specializing in matters of the heart and relationships, is known for his serious and swift work on all your everyday problems. He is also known for finding solutions to all your troubles that prevent you from leading a peaceful and harmonious life.
+
+He also practices occult rituals to help you overcome heartbreak or win back a lost love. A highly respected medium in Europe, he offers guidance on your romantic, emotional, financial, and professional future. Mr. Sila, the Grand Marabout, uses his clairvoyance to provide clear and precise answers and solutions through his mastery of ancestral rituals to help you find your way back to happiness. This can include an immediate return of affection, bringing back a lost love, or reuniting with your ex. He also addresses fidelity in relationships and combats romantic rivalry.
+
+If you are suffering from problems in love, heart, family, or relationship, the Grand Marabout Clairvoyant Medium Sila, through his various black magic practices, brings you solutions even in the most desperate cases.</p>
+       
+      </div>
+      <img src="poupees.png" alt="Monsieur Sila - Love Return" class="content-img">
+    </div>
+  </section>
+
+  <!-- Section 2: Protection & Exorcism -->
+  <section style="background: #f8f4f0;">
+    <h2 class="section-title" data-en="These secrets are amazing and rooted in the sacred sources of universal magic." 
+       data-fr="Ces secrets sont étonnants et prennent leurs bases aux sources sacrées de la magie universelle.">
+      These secrets are amazing...
+    </h2>
+    <div class="content-grid">
+      <img src="tarot.png" alt="Protection Rituals" class="content-img right">
+      <div class="content-text">
+        <h3 data-en="Medium, Exorcist & Astrologer" data-fr="Médium Désenvouteur et Marabout Astrologue">Spiritual Healer, Exorcist, and Marabout Astrologer</h3>
+        <p data-en="Also recognized as an exorcist and powerful marabout medium, Monsieur Sila protects and frees you from evil through envoûtement and désenvoutement rituals."
+           data-fr="Reconnu également comme exorciste et puissant médium marabout pour la pratique des travaux occultes à travers les rituels d’envoûtement et de désenvoutement, Monsieur Sila vous protège et vous libère du mal.">
+        Also renowned as an exorcist and powerful spiritual healer for his occult practices through spellcasting and exorcism rituals, Mr. Sila protects you and frees you from evil. Powerful protection against dangers and enemies, protection against curses, and against the evil eye. He fights against negative influences and protects you from malicious people responsible for your troubles.
+
+He removes all blockages, both known and unknown. He protects you against anxiety attacks. As a powerful spiritual healer, exorcist, clairvoyant, medium, and shaman, Mr. Sila is able to purify haunted places and rid them permanently of malevolent forces. By calling upon him, you will be safe from the forces of evil.
+          </p>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Career & Professional Success -->
+  <section>
+    <h2 class="section-title" data-en="No matter your problem: Marital, Family, Emotional, Financial or Professional. Personalized and effective solutions." 
+       data-fr="Quel que soit votre problème: Conjugale, Familial, Sentimentale, Financier ou professionnel. Solutions et conseils personnalisés et efficaces.">
+      No matter your problem...
+    </h2>
+    <div class="content-grid">
+      <div class="content-text">
+        <h3 data-en="Fortune Telling & Professional Life" data-fr="Voyance et Vie Professionnelle">Medium, Exorcist, and Marabout Astrologer</h3>
+        <p data-en="Monsieur Sila brings his expertise through occult work if you are in these situations:"
+           data-fr="Monsieur Sila vous apporte son savoir-faire par la pratique des travaux occultes si vous êtes dans de telles situations :">
+        
+        Psychic Readings and Professional Life, Medium and Astrologer for Work, Business, or Your Company
+Mr. Sila, Grand Marabout, Psychic Medium in Brussels, offers his expertise through the practice of occult rituals if you are in the following situations:
+
+– Are you unemployed? Are you having problems with your employer? Is your business struggling? Are you a merchant experiencing a decline in customers?
+
+– Are you going through a career break? Are you looking for work? Would you like a promotion from your employer? Is your business at a standstill?
+
+Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties permanently, so that they become nothing more than a bad memory.
+          </p>
+      </div>
+      <img src="outil-de-divination.png" alt="Career Success" class="content-img">
+    </div>
+  </section>
+
+  <!-- Services Summary -->
+  <section id="services" style="background: #f0ece6;">
+    <h2 class="section-title" data-en="My Services" data-fr="Mes Services">My Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <i class="fas fa-heart"></i>
+        <h3 data-en="Love Return" data-fr="Retour Affectif">Love Return</h3>
+        <p data-en="Bring back your loved one, fidelity, win back lost love." data-fr="Retour de l’être aimé, fidélité, reconquête d’amour perdu.">
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-shield-alt"></i>
+        <h3 data-en="Protection & Cleansing" data-fr="Désenvoutement & Protection">Protection & Cleansing</h3>
+        <p data-en="Remove spells, protection from evil eye, cleanse haunted places." data-fr="Suppression des sorts, protection contre le mauvais œil.">
+        </p>
+      </div>
+      <div class="service-card">
+        <i class="fas fa-briefcase"></i>
+        <h3 data-en="Career & Business" data-fr="Vie Professionnelle">Career & Business</h3>
+        <p data-en="Job search, promotion, business success, attract clients." data-fr="Recherche d’emploi, promotion, prospérité des affaires.">
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+
+<section id="contact">
+  <h2 class="section-title" data-en="Book an Appointment" data-fr="Prendre Rendez-vous">
+    Book an Appointment
+  </h2>
+
+    <!-- Form -->
+    <div class="contact-form">
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="name" data-en="Full Name *" data-fr="Nom complet *">Full Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email" data-en="Email *" data-fr="Email *">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone" data-en="Phone *" data-fr="Téléphone *">Phone *</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="service" data-en="Desired Service" data-fr="Service désiré">Desired Service</label>
+          <select id="service" name="service">
+            <option value="Love Return" data-en="Love Return" data-fr="Retour affectif">Love Return</option>
+            <option value="Desenvoutement" data-en="Desenvoutement" data-fr="Désenvoutement">Desenvoutement</option>
+            <option value="Protection" data-en="Protection" data-fr="Protection">Protection</option>
+            <option value="Career" data-en="Career Success" data-fr="Succès professionnel">Career Success</option>
+            <option value="Other" data-en="Other" data-fr="Autre">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message" data-en="Message" data-fr="Message">Message</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" data-en="Send Request" data-fr="Envoyer ma demande">Send Request</button>
+        <p class="success-msg" id="successMsg">Message sent successfully!</p>
+        <p class="error-msg" id="errorMsg">Error. Try again.</p>
+      </form>
+    </div>
+    
+  </section>
+
+
+  
+  <!-- Footer -->
+ 
+<!-- Footer with Phone Numbers + Social Icons -->
+<!-- Footer: Everything in ONE LINE -->
+<footer>
+  <div style="max-width: 1200px; margin: 0 auto; padding: 1.2rem 1rem; font-size: 0.92rem; color: #ddd; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; text-align: center;">
+    
+    <!-- Left: Phone Numbers -->
+    <div style="display: flex; gap: 1.2rem; flex-wrap: wrap; font-weight: 500;">
+      <span>
+        <i class="fas fa-flag" style="color: #ffcc00; margin-right: 0.4rem;"></i>
+        <strong>BE :</strong>
+        <a href="tel:+32466321888" style="color: var(--secondary); text-decoration: underline; margin-left: 0.3rem;">+32 466 3218 88</a>
+      </span>
+      <span>
+        <i class="fas fa-flag" style="color: #002395; margin-right: 0.4rem;"></i>
+        <strong>FR :</strong>
+        <a href="tel:+33752238646" style="color: var(--secondary); text-decoration: underline; margin-left: 0.3rem;">07 52 23 86 46</a>
+      </span>
+    </div>
+
+    <!-- Center: Copyright + RDV -->
+    <div style="flex: 1; min-width: 180px; font-size: 0.88rem; opacity: 0.9; color: #ccc;">
+      © <span id="currentYear"></span> Monsieur Sila - Grand Marabout Voyant Médium à Bruxelles 
+      <span style="white-space: nowrap;">
+       <br> | <a href="#contact" style="color: var(--secondary); text-decoration: underline;">Make an appointment</a> 
+        | 8h-20h
+      </span>
+    </div>
+
+    <!-- Right: Social Icons -->
+    <div style="display: flex; gap: 1rem;">
+      <a href="https://facebook.com" target="_blank" style="color: #ddd; font-size: 1.8rem;" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" style="color: #ddd; font-size: 1.8rem;" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/32466321888" target="_blank" style="color: #ddd; font-size: 1.8rem;" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/32466321888?text=Hello%20Monsieur%20Sila,%20I%20would%20like%20to%20book%20an%20appointment." 
+     class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script>
+    // Dynamic Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Mobile Menu
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Language Toggle
+    const langToggle = document.getElementById('langToggle');
+    let currentLang = 'en';
+    langToggle && langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'fr' : 'en';
+      langToggle.textContent = currentLang.toUpperCase();
+
+      document.querySelectorAll('[data-en][data-fr]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+
+      document.querySelectorAll('select option').forEach(opt => {
+        const key = currentLang === 'en' ? 'data-en' : 'data-fr';
+        if (opt.hasAttribute(key)) {
+          opt.textContent = opt.getAttribute(key);
+        }
+      });
+    });
+
+    // EmailJS Init (public key)
+    (function(){
+      emailjs.init("ubpGScI_G6E9spX0G");
+    })();
+
+    // Contact Form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+        message: document.getElementById('message').value || 'No message'
+      };
+
+      emailjs.send('service_h03ipl3', 'template_9lk6c0i', templateParams)
+        .then(() => {
+          document.getElementById('successMsg').style.display = 'block';
+          document.getElementById('errorMsg').style.display = 'none';
+          this.reset();
+        }, (err) => {
+          console.log('EmailJS error:', err);
+          document.getElementById('errorMsg').style.display = 'block';
+          document.getElementById('successMsg').style.display = 'none';
+        });
+    });
+    
+  </script>
+
+
+
+</body>
+</html>
