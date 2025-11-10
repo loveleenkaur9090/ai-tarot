@@ -140,18 +140,20 @@
 
     /* Call Button - Small & Beautiful */
 .call-btn {
-  display: flex;
+  /* display: flex; */
   align-items: center;
   gap: 0.4rem;
   background: #D4A017;
   color: white;
-  padding: 0.5rem 0.9rem;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 0.85rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+  font-weight: 500;
   white-space: nowrap;
+  border: none;
+  padding:0.7rem;
+  cursor: pointer;
+  width: 15%;
+  transition: 0.3s;
 }
 
 .call-btn i {
@@ -162,7 +164,6 @@
   background: #FFFF;
   color: black;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
 }
 
 /* Mobile View */
@@ -533,12 +534,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <div class="nav-right">
-      <!-- Small Call Button -->
-      <a href="tel:+33752238646" class="call-btn" title="Appeler la France">
-        <i class="fas fa-phone"></i> Fr 07 52 23 86 46
-      </a>
-    </div>
 
     <div class="hamburger" id="hamburger">
       <i class="fas fa-bars"></i>
@@ -551,12 +546,18 @@
   <!-- Header -->
   <header id="home">
     <h1>Monsieur Sila</h1>
-    <p data-en="Grand Marabout Medium in Brussels" data-fr="Grand Marabout Voyant Médium à Bruxelles">
+    <!-- <p data-en="Grand Marabout Medium in Brussels" data-fr="Grand Marabout Voyant Médium à Bruxelles">
       Grand Marabout Medium in Brussels
-    </p>
+    </p> -->
     <p data-en="Love Return • Protection • Career • Desenvoutement" data-fr="Retour Affectif • Désenvoutement • Protection • Travail">
       Love Return • Protection • Career • Desenvoutement
     </p>
+    <div class="nav-right">
+      <!-- Small Call Button -->
+      <a href="tel:+33752238646" class="call-btn" title="Appeler la France">
+        <i class="fas fa-phone"></i> Fr 07 52 23 86 46
+      </a>
+    </div>
   </header>
 
   <!-- Section 1: About & Love Specialist -->
