@@ -551,43 +551,76 @@
   }
 
     }
+    /* Gallery Section */
+    .gallery-section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-.view-gallery-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  background: linear-gradient(45deg, #D4A017, #FFD700);
-  color: white;
-  padding: 0.9rem 2rem; /* Normal size */
-  border-radius: 50px;
-  font-size: 1.1rem; /* Normal font */
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 6px 15px rgba(212, 160, 23, 0.3);
-  transition: all 0.3s ease;
-  border: 2px solid #D4A017;
-}
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
 
-.view-gallery-btn:hover {
-  background: linear-gradient(45deg, #8B4513, #D4A017);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(212, 160, 23, 0.5);
-}
+    .section-title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--secondary);
+      display: block;
+      margin: 1rem auto;
+      border-radius: 2px;
+    }
 
-.view-gallery-btn i {
-  font-size: 1.2rem;
-}
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
 
-/* Mobile pe thoda chhota */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Footer - EXACT SAME */
+    footer {
+      background: var(--dark);
+      color: #ddd;
+      font-size: 0.95rem;
+    }
+
 @media (max-width: 768px) {
-  .view-gallery-btn {
-    padding: 0.8rem 1.8rem;
-    font-size: 1rem;
-  }
-  .view-gallery-btn i {
-    font-size: 1.1rem;
-  }
-}
+.gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item img {
+        height: 250px;
+      }
+    }
+
 </style>
 
 
@@ -735,12 +768,6 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
   <!-- Contact Form -->
 
 <section id="contact">
-  <!-- View Gallery Button - Form ke upr daalo -->
-<div style="text-align: center; margin-bottom: 2rem;">
-  <a href="gallery.html" class="view-gallery-btn">
-    <i class="fas fa-images"></i> view the photo gallery
-  </a>
-</div>
  
   <h2 class="section-title" data-en="View Gallery" data-fr="Prendre Rendez-vous">
     Book an Appointment
@@ -781,9 +808,39 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
     </div>
     
   </section>
-
-
-  
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <h2 class="section-title">Ma Mystical Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?q=80&w=1470&auto=format&fit=crop" alt="Marabout en méditation">
+      </div>
+    </div>
+  </section>
   <!-- Footer -->
  
 <!-- Footer with Phone Numbers + Social Icons -->
@@ -833,7 +890,6 @@ Mr. Sila, Grand Marabout, can help you resolve these problems and difficulties p
      class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-
   <!-- Scripts -->
   <script>
     // Dynamic Year
